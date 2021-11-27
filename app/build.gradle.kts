@@ -45,6 +45,8 @@ dependencies {
     implementation("com.github.bitcoinj:bitcoinj:0.15.10")
     implementation("io.insert-koin:koin-core:3.1.4")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-RC")
+
     testImplementation("junit:junit:4.13.2")
     testImplementation("io.insert-koin:koin-test:3.1.4")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")

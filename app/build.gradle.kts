@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlin-android-extensions")
+    kotlin("plugin.serialization") version "1.6.0"
 }
 
 android {
@@ -14,6 +16,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -43,7 +49,9 @@ dependencies {
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.2")
     implementation("com.github.bitcoinj:bitcoinj:0.15.10")
+
     implementation("io.insert-koin:koin-core:3.1.4")
+    implementation("io.insert-koin:koin-android:3.1.4")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-RC")
 

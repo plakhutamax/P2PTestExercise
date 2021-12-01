@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">P2PTestExercise</string>
+    <string name="seed_phrase">Seed phrase</string>
+    <string name="seed_phrase_hint">Enter seed phrase</string>
+    <string name="seed_phrase_error_wrong_phrase">Invalid seed phrase</string>
+    <string name="seed_phrase_error_generic">Unknown error</string>
+    <string name="sign_in">Sign in</string>
 </resources>

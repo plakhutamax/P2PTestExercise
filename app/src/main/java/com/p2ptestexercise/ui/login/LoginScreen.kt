@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.StringRes
 import androidx.core.widget.doAfterTextChanged
+import com.p2ptestexercise.MainRouter
 import com.p2ptestexercise.databinding.LoginScreenBinding
 import com.p2ptestexercise.ui.BaseFragment
 import org.koin.android.ext.android.inject
@@ -74,6 +75,6 @@ class LoginScreen :
     }
 
     override fun navigateToWallets() {
-        TODO("Not yet implemented")
+        mainRouter.navigateTo(MainRouter.Destination.Wallets)
     }
 }

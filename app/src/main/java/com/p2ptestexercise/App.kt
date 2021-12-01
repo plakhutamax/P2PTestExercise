@@ -4,6 +4,7 @@ import android.app.Application
 import com.p2ptestexercise.di.AccountModule
 import com.p2ptestexercise.di.LoginModule
 import com.p2ptestexercise.di.NetworkModule
+import com.p2ptestexercise.di.WalletsModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -19,7 +20,8 @@ class App : Application() {
             modules(
                 NetworkModule.create(),
                 AccountModule.create(),
-                LoginModule.create()
+                LoginModule.create(),
+                WalletsModule.create()
             )
         }
     }

@@ -17,7 +17,7 @@ class AuthInteractorImpl(
     private fun String.toPassphrase(): Passphrase {
         // Split usage here is OK, cuz we need it result
         val words = this.split(" ")
-        check(words.size != PASSPHRASE_WORDS_COUNT) {
+        check(words.size == PASSPHRASE_WORDS_COUNT) {
             "Passphrase should be length of $PASSPHRASE_WORDS_COUNT"
         }
         return words

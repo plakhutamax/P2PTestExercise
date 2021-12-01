@@ -44,6 +44,7 @@ class LoginPresenter(
             } else {
                 view.showError(R.string.seed_phrase_error_generic)
             }
+            return
         }
 
         router.navigateToWallets()

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_flipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/loading_state"
+        layout="@layout/wallets_screen_loading" />
+
+    <include
+        android:id="@+id/error_state"
+        layout="@layout/wallets_screen_error_inline" />
+
+    <include
+        android:id="@+id/empty_state"
+        layout="@layout/wallet_screen_empty" />
+
+    <include
+        android:id="@+id/normal_state"
+        layout="@layout/wallets_screen_data" />
+</ViewFlipper>

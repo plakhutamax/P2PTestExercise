@@ -1,4 +1,4 @@
-package com.p2ptestexercise.solanaj
+package com.p2ptestexercise.model.solanaj
 
 import org.bitcoinj.crypto.DeterministicHierarchy
 import org.bitcoinj.crypto.HDKeyDerivation

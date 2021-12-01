@@ -1,4 +1,4 @@
-package com.p2ptestexercise.solanaj;
+package com.p2ptestexercise.model.solanaj;
 
 // https://github.com/InstantWebP2P/tweetnacl-java/blob/master/src/main/java/com/iwebpp/crypto/TweetNaclFast.java
 

@@ -11,7 +11,7 @@ class WalletInteractorImpl(
 ) : WalletInteractor {
 
     companion object {
-        private const val ENCODING = "jsonParseddsfdsf"
+        private const val ENCODING = "jsonParsed"
     }
 
     override suspend fun fetchWallets(): List<Wallet> {

@@ -1,4 +1,4 @@
-package com.p2ptestexercise.domain.login
+package com.p2ptestexercise.domain.account
 
 import android.content.SharedPreferences
 import android.util.Base64

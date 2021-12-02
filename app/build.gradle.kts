@@ -59,6 +59,8 @@ dependencies {
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-scalars:2.5.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.5.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("io.insert-koin:koin-test:3.1.4")

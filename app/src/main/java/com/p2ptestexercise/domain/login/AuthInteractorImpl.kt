@@ -1,5 +1,8 @@
 package com.p2ptestexercise.domain.login
 
+import com.p2ptestexercise.domain.account.AuthRepository
+import com.p2ptestexercise.domain.account.Passphrase
+
 class AuthInteractorImpl(
     private val repository: AuthRepository
 ) : AuthInteractor {
@@ -8,7 +11,7 @@ class AuthInteractorImpl(
     }
 
     override fun validatePassphrase(passphrase: String) =
-        passphrase.wordsCount == PASSPHRASE_WORDS_COUNT
+        true //passphrase.wordsCount == PASSPHRASE_WORDS_COUNT
 
     override fun createAccount(passphrase: String) {
         repository.createAccount(passphrase.toPassphrase())
@@ -17,9 +20,9 @@ class AuthInteractorImpl(
     private fun String.toPassphrase(): Passphrase {
         // Split usage here is OK, cuz we need it result
         val words = this.split(" ")
-        check(words.size == PASSPHRASE_WORDS_COUNT) {
-            "Passphrase should be length of $PASSPHRASE_WORDS_COUNT"
-        }
+//        check(words.size == PASSPHRASE_WORDS_COUNT) {
+//            "Passphrase should be length of $PASSPHRASE_WORDS_COUNT"
+//        }
         return words
     }
 

@@ -1,4 +1,4 @@
-package com.p2ptestexercise.domain.login
+package com.p2ptestexercise.domain.account
 
 
 import com.p2ptestexercise.model.solanaj.Account

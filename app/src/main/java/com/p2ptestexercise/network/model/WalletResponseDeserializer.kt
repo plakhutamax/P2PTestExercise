@@ -9,6 +9,8 @@ class WalletResponseDeserializer : JsonDeserializer<WalletResponse> {
         private const val KEY_RESULT = "result"
         private const val KEY_ERROR = "error"
         private const val KEY_VALUE = "value"
+        private const val KEY_MESSAGE = "message"
+        private const val KEY_CODE = "code"
     }
 
     // Not very pretty, but we shouldn't expose this custom gson, tided inner use only
@@ -32,10 +34,9 @@ class WalletResponseDeserializer : JsonDeserializer<WalletResponse> {
         val root = json.asJsonObject
         if (root.has(KEY_ERROR)) {
             val error = root.getAsJsonObject(KEY_ERROR)
-            //TODO: parse error response
             return WalletResponse.Error(
-                "",
-                0
+                error.get(KEY_MESSAGE).asString,
+                error.get(KEY_CODE).asInt
             )
         }
 

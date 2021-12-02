@@ -31,10 +31,6 @@ class LoginScreen :
     private var _binding: LoginScreenBinding? = null
     private val binding get() = _binding!!
 
-    override var isAuthenticationInProgress: Boolean
-        get() = TODO("Not yet implemented")
-        set(value) {}
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

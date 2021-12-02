@@ -26,16 +26,16 @@ class WalletDeserializer : JsonDeserializer<Wallet> {
         check(json != null)
         val root = json.asJsonObject
 
-        val pubkey = root.getAsJsonPrimitive(KEY_PUBKEY).toString()
+        val pubkey = root.getAsJsonPrimitive(KEY_PUBKEY).asString
         val accountInfo = root.getAsJsonObject(KEY_ACCOUNT)
             .getAsJsonObject(KEY_DATA)
             .getAsJsonObject(KEY_PARSED)
             .getAsJsonObject(KEY_INFO)
 
-        val mint = accountInfo.getAsJsonPrimitive(KEY_MINT).toString()
+        val mint = accountInfo.getAsJsonPrimitive(KEY_MINT).asString
         val amountString = accountInfo.getAsJsonObject(KEY_TOKEN_AMONT)
             .getAsJsonPrimitive(KEY_UI_AMOUNT_STRING)
-            .toString()
+            .asString
 
         return Wallet(
             publicKey = pubkey,

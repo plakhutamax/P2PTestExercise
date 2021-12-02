@@ -29,6 +29,9 @@ class LoginPresenter(
     }
 
     override fun signIn(passphrase: String) {
+        // In common case we should start progress here, but account creation doesn't
+        // involve any long running tasks
+
         // We don't have any particular requirements about error handling
         if (!authInteractor.validatePassphrase(passphrase)) {
             view.showError(R.string.seed_phrase_error_wrong_phrase)

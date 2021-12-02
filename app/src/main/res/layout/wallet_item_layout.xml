@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/wallet_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/text_flow"
+        app:layout_constraintEnd_toStartOf="@id/text_flow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_flow"
+        app:srcCompat="@drawable/ic_wallet"
+        app:tint="?attr/colorAccent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/text_flow"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="amount_wrapper, pubkey, mintAddress"
+        app:flow_verticalGap="4dp"
+        app:flow_verticalStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wallet_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/amount_wrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="amount_title, amount"
+        app:flow_horizontalGap="8dp" />
+
+    <TextView
+        android:id="@+id/amount_title"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wallet_amount_title" />
+
+    <TextView
+        android:id="@+id/amount"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="1.5" />
+
+    <TextView
+        android:id="@+id/pubkey"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:lines="1"
+        tools:text="somelongpublickeyforsomepurpose" />
+
+    <TextView
+        android:id="@+id/mintAddress"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:lines="1"
+        tools:text="mintaddressforsomeotherpurpose" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

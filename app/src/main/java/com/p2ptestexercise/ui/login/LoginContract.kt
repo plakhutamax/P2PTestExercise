@@ -7,8 +7,6 @@ import com.p2ptestexercise.ui.IView
 
 interface LoginContract {
     interface View : IView {
-        var isAuthenticationInProgress: Boolean
-
         fun hideHelper()
         fun showHelper(@StringRes textRes: Int)
         fun showError(@StringRes textRes: Int)

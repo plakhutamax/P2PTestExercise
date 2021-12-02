@@ -6,4 +6,8 @@
     <string name="seed_phrase_error_generic">Unknown error</string>
     <string name="sign_in">Sign in</string>
     <string name="try_again">Try again</string>
+    <string name="wallets_loading_error">Failed to fetch wallets</string>
+    <string name="wallets_loading_error_hint">Check your internet connection and try again</string>
+    <string name="wallets_empty">You don\'t have any wallets yet</string>
+    <string name="wallet_amount_title">Amount:</string>
 </resources>

@@ -10,8 +10,8 @@ class RpcRequestInteractorImpl(
         private const val PROGRAM_ID = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
     }
 
-    override val accountPublicKey: String =
-        requireNotNull(authRepository.getAccount()?.publicKey?.toBase58())
+    override val accountPublicKey: String
+        get() = requireNotNull(authRepository.getAccount()?.publicKey?.toBase58())
 
     //TODO: what real program id should be?
     override val programIdKey: String = PROGRAM_ID

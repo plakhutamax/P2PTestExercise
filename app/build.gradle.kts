@@ -45,6 +45,7 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.4.0")
     implementation("androidx.security:security-crypto:1.0.0")
     implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.core:core-splashscreen:1.0.0-alpha02")
 
     implementation("androidx.biometric:biometric:1.1.0")
     implementation("androidx.core:core-ktx:1.7.0")

@@ -1,10 +1,7 @@
 package com.p2ptestexercise
 
 import android.app.Application
-import com.p2ptestexercise.di.AccountModule
-import com.p2ptestexercise.di.LoginModule
-import com.p2ptestexercise.di.NetworkModule
-import com.p2ptestexercise.di.WalletsModule
+import com.p2ptestexercise.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -19,6 +16,7 @@ class App : Application() {
             androidContext(this@App)
             modules(
                 NetworkModule.create(),
+                ActivityModule.create(),
                 AccountModule.create(),
                 LoginModule.create(),
                 WalletsModule.create()

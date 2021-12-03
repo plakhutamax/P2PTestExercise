@@ -1,9 +1,9 @@
-package com.p2ptestexercise
+package com.p2ptestexercise.ui
 
 interface MainRouter {
 
     enum class Destination {
-        Wallets
+        Wallets, Login
     }
 
     fun navigateTo(destination: Destination)

@@ -3,7 +3,6 @@ package com.p2ptestexercise.ui
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.p2ptestexercise.MainRouter
 
 abstract class BaseFragment<View : IView, Router : IRouter, Presenter : IPresenter<View, Router>> :
     Fragment(), IView, IRouter {

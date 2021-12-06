@@ -48,6 +48,11 @@ class LoginScreen :
         }
     }
 
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
+    }
+
     override fun showHelper(@StringRes textRes: Int) = with(binding.passInputLayout) {
         helperText = getString(textRes)
         isHelperTextEnabled = true

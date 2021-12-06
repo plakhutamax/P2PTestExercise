@@ -73,6 +73,11 @@ class WalletsScreen :
         presenter.loadData()
     }
 
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
+    }
+
     override fun showLoadingState() {
         binding.contentFlipper.displayedChild = CHILD_LOADING
     }
